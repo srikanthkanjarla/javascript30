@@ -4,10 +4,19 @@ html{
     background-size:cover;
     height:100vh;
 }
+.header{
+    margin:3rem 0 0 4rem;
+    color:#fff;
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow:0.2rem 0.2rem 0.5rem #ff0088;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .container{
     display: flex;
     align-items: center;
-    height: 90vh;
+    height: 85vh;
+    
 }
  .keys{
      flex:auto;
@@ -46,5 +55,9 @@ html{
 @media screen and (max-width:765px){
     html{
         font-size: 7px;
+    }
+    .header{
+        text-align: center;
+        font-size: 4rem;
     }
 }
