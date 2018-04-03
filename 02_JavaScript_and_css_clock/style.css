@@ -1,0 +1,40 @@
+html{
+    font-size: 10px;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.heading{
+    font-weight: bold;
+    font-size: 3.2rem;
+    color:seagreen;
+    margin-left:5rem;
+}
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    height: 95vh; 
+}
+.clock{
+    background-color:#006080;
+    border-radius:50%;
+    flex:0 0 20rem;
+    height: 20rem;
+    border:0.5rem solid goldenrod;
+    position: relative;
+}
+.hand {
+    height: 0.1rem;
+    background-color: #fff;
+    position:absolute;
+    top: 50%;
+    width:50%;
+    transform: rotate(90deg);
+    transition-timing-function: ease-in;
+    transform-origin: 100%;
+    transition:all 0.1s;
+    }
+ 
