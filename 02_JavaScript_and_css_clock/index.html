@@ -11,26 +11,36 @@
     <h2 class="heading"> JavaScript CSS Clock</h2>
     <div class="container">         
         <div class="clock">
-            <div class="hand seconds-hand"></div>
-            <div class="hand minutes-hand"></div>
-            <div class="hand hours-hand"></div>
+            <div class="hand sec-hand"></div>
+            <div class="hand min-hand"></div>
+            <div class="hand hour-hand"></div>
         </div>
     </div>
     <script>
-    function secondsHand(){
-        const date = new Date()
+    function runClock(){
+        const date = new Date();
         const sec = date.getSeconds();
         const min = date.getMinutes();
         const hour = date.getHours();
-        const secDeg =(sec* 6) + 90;
-        const minDeg = (min *6) + (sec*0.10) +90;
-        const hrDeg=(hour*30)+(min*0.5) +90;
-        document.querySelector(".seconds-hand").style.transform="rotate("+secDeg+"deg)";
-        document.querySelector(".minutes-hand").style.transform="rotate("+minDeg+"deg)";
-        document.querySelector(".hours-hand").style.transform="rotate("+hrDeg+"deg)";
+
+        const secDeg =(sec* 6) + 90 +1;
+        const minDeg = (min *6) + (sec*0.10) +90 +1;
+        const hrDeg=(hour*30)+(min*0.5) +90 +1;
+
+        document.querySelector(".sec-hand").style.transform=`rotate(${secDeg}deg)`;
+        document.querySelector(".min-hand").style.transform=`rotate(${minDeg}deg)`;
+        document.querySelector(".hour-hand").style.transform=`rotate(${hrDeg}deg)`;
     }
-    secondsHand();
-    setInterval(secondsHand,1000);
+    runClock();
+    setInterval(runClock,1000);
     </script>
+    <!-- What I learned from this challenge
+        JavaScript 
+          -> Date method, Template Literals,Converting Seconds, Hours, Minutes into Degrees
+          -> Adding CSS properties through DOM
+        CSS
+          -> positioning Elements with position property
+          -> Trasnsitions,Transform
+    -->
 </body>
 </html>

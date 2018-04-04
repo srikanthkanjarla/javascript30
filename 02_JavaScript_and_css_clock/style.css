@@ -1,40 +1,58 @@
 html{
     font-size: 10px;
+    background:url("clock-bg.jpeg") no-repeat center;
+    background-size: cover;
 }
 body{
     margin: 0;
     padding: 0;
 }
 .heading{
+    color:#f5f5f5;
     font-weight: bold;
-    font-size: 3.2rem;
-    color:seagreen;
-    margin-left:5rem;
+    font-size: 3.6rem;
+    text-align: center;
+    text-shadow:0.3rem 0.3rem #7575ff; 
 }
 .container{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    height: 95vh; 
+    height: 80vh; 
 }
 .clock{
-    background-color:#006080;
+    background-color:#f5f5f5;
     border-radius:50%;
     flex:0 0 20rem;
     height: 20rem;
-    border:0.5rem solid goldenrod;
+    border:0.7rem solid transparent;
     position: relative;
+    box-shadow: 0 0 0 1rem #7575ff
 }
 .hand {
-    height: 0.1rem;
-    background-color: #fff;
     position:absolute;
     top: 50%;
     width:50%;
     transform: rotate(90deg);
     transition-timing-function: ease-in;
     transform-origin: 100%;
-    transition:all 0.1s;
+    transition:all 0.2s;
     }
- 
+.sec-hand{
+    height:0.2rem;
+    background-color:#777;
+}
+.min-hand{
+    height:0.3rem;
+    background-color:#555;
+}
+.hour-hand{
+    height:0.4rem;
+    background-color:#333;
+}
+ @media screen and (max-width:765px){
+     html{
+        background: url(clock-bg-sm.jpeg) no-repeat center;
+     }
+ }
