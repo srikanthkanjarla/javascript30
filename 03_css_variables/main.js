@@ -1,27 +1,9 @@
-const headline = document.querySelector(".user-color");
-const colorPicker = document.querySelector("#color-picker");
-const spacing = document.querySelector("#space-range");
-const opacity = document.querySelector("#blur-range");
-const imgBox = document.querySelector(".img-container");
-const img = document.querySelector(".img-scene");
-
-colorPicker.addEventListener("change",updateColor);
-spacing.addEventListener("change",updateBorderSpace);
-opacity.addEventListener("change",updateImageOpacity);
-
-function updateColor(e){
-    console.log(e.target.value);
-    headline.style.setProperty("color",e.target.value);
-    imgBox.style.setProperty("border-color",e.target.value);
+const controls = document.querySelectorAll('input');
+function updateControl() {
+    const unit = this.dataset.unit || '';
+    document.documentElement.style.setProperty(`--${this.name}`, this.value + unit);
 }
 
-function updateBorderSpace(e){
-imgBox.style.setProperty("border-width",`${e.target.value}rem`);
-}
+controls.forEach(control => control.addEventListener('change', updateControl));
+controls.forEach(control => control.addEventListener('mousemove', updateControl));
 
-function updateImageOpacity(e){      
-    img.style.setProperty("filter",`blur(${e.target.value}px`);
-}
-
-
- 
