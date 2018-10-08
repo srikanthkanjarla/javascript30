@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+}
+
+.panels {
+    display: flex;
+    flex-flow: row wrap;
+    color: #fff;
+}
+
+.panel1 {
+    background: url(images/photo_1.jpeg);
+}
+
+.panel2 {
+    background: url(images/photo_2.jpeg);
+}
+
+.panel3 {
+    background: url(images/photo_3.jpeg);
+}
+
+.panel4 {
+    background: url(images/photo_4.jpeg);
+}
+
+.panel5 {
+    background: url(images/photo_5.jpeg);
+}
+
+.panel {
+    flex: 1;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-shadow: 2px 2px 4px violet;
+    transition: 2ms;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+p {
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.active {
+    flex: 5;
+}
+
+.close {
+    visibility: hidden;
+}
