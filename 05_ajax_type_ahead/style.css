@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Mali');
+
+:root {
+    --pewter-blue: #8ea8c3;
+    --japanese-indigo: #23395b;
+    --queen-blue: #406e8e;
+}
+
+body {
+    background-color: var(--pewter-blue);
+    color: #ffffff;
+    font-family: 'Mali', cursive;
+}
+
+h1 {
+    text-align: center;
+    color: #0353a4;
+}
+
+.input-wrapper {
+    text-align: center;
+}
+
+.input-control {
+    padding: 14px;
+    width: 430px;
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: 700;
+    color: #0353a4;
+}
+
+.highlight {
+    background-color: #fff;
+}
+
+ul {
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    padding: 10px;
+    margin: 3px auto;
+    width: 300px;
+    color: black;
+    font-weight: 600;
+    position: relative;
+}
+
+li:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid var(--pewter-blue);
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+
+li:before {
+    content: '';
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid #fff;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+
+li:nth-child(even) {
+    background-color: #a5c882;
+
+}
+
+li:nth-child(even):before {
+    border-left: 20px solid #a5c882;
+}
+
+li:nth-child(odd) {
+    background-color: #f7dd72;
+}
+
+li:nth-child(odd):before {
+    border-left: 20px solid #f7dd72;
+}
