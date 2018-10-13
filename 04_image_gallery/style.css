@@ -9,23 +9,28 @@ body {
 }
 
 .panel1 {
-    background: url(images/photo_1.jpeg);
+    background-image: url('https://images.pexels.com/photos/1427879/pexels-photo-1427879.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-color: #818d92;
 }
 
 .panel2 {
-    background: url(images/photo_2.jpeg);
+    background-image: url('https://images.pexels.com/photos/969679/pexels-photo-969679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-color: #a08794;
 }
 
 .panel3 {
-    background: url(images/photo_3.jpeg);
+    background-image: url('https://images.pexels.com/photos/654/clouds-cloudy-agriculture-farm.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-color: #bb7e8c;
 }
 
 .panel4 {
-    background: url(images/photo_4.jpeg);
+    background-image: url('https://images.pexels.com/photos/415708/pexels-photo-415708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-color: #c9b6be;
 }
 
 .panel5 {
-    background: url(images/photo_5.jpeg);
+    background-image: url('https://images.pexels.com/photos/906024/pexels-photo-906024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-color: #fbacbe;
 }
 
 .panel {
@@ -35,23 +40,31 @@ body {
     background-size: cover;
     background-position: center;
     text-shadow: 2px 2px 4px violet;
-    transition: 2ms;
+    transition: ease;
     display: flex;
-    flex-flow: column wrap;
+    align-items: flex-end;
 }
 
 p {
+    text-align: center;
     font-size: 45px;
     font-weight: bold;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+    display: none;
 }
 
-.active {
+.panel:hover {
     flex: 5;
 }
 
-.close {
-    visibility: hidden;
+.panel:hover p {
+    display: block;
+    background-color: rgba(172, 6, 34, 0.7);
+    padding: 30px 10px;
+    margin-bottom: 0;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    p {
+        font-size: 20px;
+    }
 }
